@@ -74,18 +74,14 @@
   }
 </style>
 
-
-
-
-
-
-
-
-
-  <script>
+<script>
+// Mantenemos tu configuración tal cual, solo aseguramos que el objeto MathJax exista antes de la carga
 window.MathJax = {
   loader: {
     load: ['[tex]/mhchem']
+  },
+  output: {
+    font: "mathjax-fira"
   },
   tex: {
     packages: {'[+]': ['mhchem']},
@@ -101,24 +97,11 @@ window.MathJax = {
       "lims": "\\mathop{\\text{lím}}\\limits",
       "dd": "\\,\\mathrm{d}"
     }
-  },
-  output: {
-    font: 'mathjax-fira'
   }
 };
 </script>
 
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/es5/tex-chtml.js"></script>
-  
-
-
-
-
-
-
-
-
-
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.7/tex-chtml-nofont.js"></script>
   
 </head>
 
@@ -126,6 +109,9 @@ window.MathJax = {
 
 
 
+
+
+  
 
 
   
