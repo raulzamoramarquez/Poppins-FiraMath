@@ -78,10 +78,10 @@
 <script>
 MathJax = {
   loader: {
-    load: ['[tex]/mhchem'] 
+    load: ['[tex]/mhchem']
   },
   output: {
-    font: "https://cdn.jsdelivr.net/npm/@mathjax/mathjax-fira-font"
+    font: "mathjax-fira"  // CAMBIADO: Volvemos al nombre estándar, no la URL completa
   },
   tex: {
     packages: {'[+]': ['mhchem']},
@@ -101,9 +101,13 @@ MathJax = {
 };
 </script>
 
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0/tex-chtml-nofont.js"></script>
+<!-- CAMBIADO: Usamos la versión beta.7 que es más estable y compatible con Fira Math -->
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@4.0.0-beta.7/tex-chtml-nofont.js"></script>
   
 </head>
+
+
+  
 <body>
 
 <img src="logo.png" alt="Logo de la empresa" class="logo">
