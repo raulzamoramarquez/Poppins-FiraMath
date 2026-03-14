@@ -77,10 +77,6 @@
 
 <script>
 MathJax = {
-  loader: {
-    load: ['[tex]/mhchem'],        // fuerza la carga temprana del paquete
-    ready: () => MathJax.loader.preLoad('[tex]/mhchem')  // lo precarga antes del arranque
-  },
   output: {
     font: "mathjax-fira"
   },
@@ -103,8 +99,7 @@ MathJax = {
 </script>
 
 
-<script async src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js"></script>
-
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@4/es5/tex-chtml-full.js"></script>
   
   
 </head>
