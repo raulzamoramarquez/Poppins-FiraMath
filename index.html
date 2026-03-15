@@ -75,9 +75,8 @@
   }
 </style>
 
-<script>
-  
-  window.MathJax = {
+  <script>
+window.MathJax = {
   loader: {
     load: ['[tex]/mhchem', '[mathjax-fira]/chtml']
   },
@@ -85,27 +84,21 @@
     font: 'mathjax-fira'
   },
   tex: {
-    packages: {'[+]': ['mhchem']}
+    packages: {'[+]': ['mhchem']},
+    macros: {
+      "e": "\\mathrm{e}",
+      "pi": "\\mathrm{π}",
+      "i": "\\mathrm{i}",
+      "phi": "\\text{𝜙}",
+      "sen": "\\operatorname{sen}",
+      "tg": "\\operatorname{tg}",
+      "arctg": "\\operatorname{arctg}",
+      "cosec": "\\operatorname{cosec}",
+      "lims": "\\mathop{\\text{lím}}\\limits",
+      "dd": "\\,\\mathrm{d}"
+    }
   }
 };
-
-  
-  tex: {
-      packages: {'[+]': ['mhchem']},
-      macros: {
-        "e": "\\mathrm{e}",
-        "pi": "\\mathrm{π}",
-        "i": "\\mathrm{i}",
-        "phi": "\\text{𝜙}",
-        "sen": "\\operatorname{sen}",
-        "tg": "\\operatorname{tg}",
-        "arctg": "\\operatorname{arctg}",
-        "cosec": "\\operatorname{cosec}",
-        "lims": "\\mathop{\\text{lím}}\\limits",
-        "dd": "\\,\\mathrm{d}"
-      }
-    }
-  };
 </script>
 
 
