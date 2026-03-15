@@ -77,19 +77,20 @@
 
 <script>
   window.MathJax = {
-    loader: {
-      /* 1. Definimos la ruta externa para que encuentre la fuente */
-      paths: {
-        'mathjax-fira': 'https://cdn.jsdelivr.net/npm/mathjax-fira-font@1.0.0-beta.1/es5/output/chtml/fonts/fira-math'
-      },
-      /* 2. Cargamos mhchem Y explícitamente el componente de la fuente */
-      load: ['[tex]/mhchem', '[mathjax-fira]/chtml']
+  loader: {
+    paths: {
+      'mathjax-fira': 'https://cdn.jsdelivr.net/npm/mathjax-fira-font@1.0.0-beta.1/es5/output/chtml/fonts/fira-math'
     },
-    output: {
-      font: 'mathjax-fira', // Usa la fuente cargada arriba
-      displayMessages: false
-    },
-    tex: {
+    load: ['[tex]/mhchem', '[mathjax-fira]/chtml']
+  },
+  chtml: {
+    font: 'mathjax-fira'
+  },
+  tex: {
+    packages: {'[+]': ['mhchem']}
+  }
+};
+  tex: {
       packages: {'[+]': ['mhchem']},
       macros: {
         "e": "\\mathrm{e}",
