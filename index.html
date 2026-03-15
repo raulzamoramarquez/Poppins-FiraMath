@@ -75,13 +75,16 @@
             }
         </style>
 
+
+
 <script>
     window.MathJax = {
         loader: {
-            load: ['[tex]/mhchem']
+            /* Cargamos mhchem Y la fuente Fira Math explícitamente */
+            load: ['[tex]/mhchem', 'output/chtml', '[mathjax-fira]/chtml']
         },
-        // Añadimos la sección de salida para especificar la fuente
         output: {
+            /* Ahora que está cargada, la definimos como fuente de salida */
             font: 'mathjax-fira',
             displayMessages: false
         },
@@ -102,7 +105,7 @@
         },
         startup: {
             ready: () => {
-                console.log('MathJax configurado con Fira Math');
+                console.log('MathJax v4: Fira Math cargada y lista');
                 MathJax.startup.defaultReady();
             }
         }
@@ -110,6 +113,9 @@
 </script>
 
 <script id="MathJax-script" src="https://cdn.jsdelivr.net/npm/mathjax@4/es5/tex-chtml.js"></script>
+
+
+        
 
     </head>
 
