@@ -105,11 +105,11 @@ window.MathJax = {
   },
 output: {
     font: 'mathjax-fira',
-    scale: 1.05, // Incremento sutil para equiparar el "peso" de Poppins
-    chtml: {
-      matchFontHeight: true
-    }
+    scale: 1.05,
+    matchFontHeight: true, // Corregido: fuera del bloque chtml
+    displayOverflow: 'linebreak' 
   },
+  
   tex: {
     packages: {'[+]': ['mhchem']},
     macros: {
