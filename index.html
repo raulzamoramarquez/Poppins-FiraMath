@@ -84,11 +84,22 @@ window.MathJax = {
     font: 'mathjax-fira'
   },
   tex: {
-    packages: {'[+]': ['mhchem']}
+    packages: {'[+]': ['mhchem']},
+    macros: {
+      "e": "\\mathrm{e}",
+      "pi": "\\mathrm{π}",
+      "i": "\\mathrm{i}",
+      "phi": "\\text{𝜙}",
+      "sen": "\\operatorname{sen}",
+      "tg": "\\operatorname{tg}",
+      "arctg": "\\operatorname{arctg}",
+      "cosec": "\\operatorname{cosec}",
+      "lims": "\\mathop{\\text{lím}}\\limits",
+      "dd": "\\,\\mathrm{d}"
+    }
   },
   startup: {
     pageReady() {
-      // Precargar TODOS los datos de fuente antes de renderizar (solución oficial)
       return MathJax.startup.document.outputJax.font
         .loadDynamicFiles()
         .then(() => MathJax.startup.defaultPageReady());
@@ -97,7 +108,6 @@ window.MathJax = {
 };
 </script>
 
-<!-- Script de MathJax -->
 <script src="https://cdn.jsdelivr.net/npm/mathjax@4/tex-chtml-nofont.js"></script>
 
 </head>
@@ -111,6 +121,10 @@ Ejemplo: \( a + b = c d e f g h i j k l mn o p q \)
 Química: \(\ce{H2O}\) y \(\ce{CO2}\)
 </p>
 
+<p>
+Macro ejemplo: \( \sen(x) = \frac{1}{\cosec(x)} \)
+</p>
+
 <script>
   console.log('📋 Scripts cargados:');
   document.querySelectorAll('script').forEach(s => {
@@ -119,7 +133,6 @@ Química: \(\ce{H2O}\) y \(\ce{CO2}\)
 </script>
 
 <script>
-  // Verificar que MathJax cargó
   setTimeout(() => {
     if (typeof MathJax !== 'undefined') {
       console.log('✅ MathJax cargado:', MathJax.version);
