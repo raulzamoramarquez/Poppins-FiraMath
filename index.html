@@ -73,8 +73,31 @@
     margin: 0 auto;
     shape-rendering: geometricPrecision;
   }
+
+
+  /* Corrección quirúrgica para Firefox en móviles (Android) */
+  @supports (-moz-appearance:none) {
+    @media (pointer: coarse) {
+      mjx-container {
+        font-size: 1.18em !important;
+      }
+    }
+  }
+
+
+
+  
 </style>
 
+
+
+
+
+
+
+
+
+  
 <script>
 window.MathJax = {
   loader: {
